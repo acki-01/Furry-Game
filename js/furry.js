@@ -3,4 +3,4 @@ function Furry() {
   this.y = 0;
   this.direction = "right";
 }
-module.exports= furry;
+module.exports = Furry;

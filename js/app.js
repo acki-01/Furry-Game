@@ -1,12 +1,6 @@
-function Furry() {
-  this.x = 0;
-  this.y = 0;
-  this.direction = "right";
-}
-function Coin() {
-  this.x = Math.floor(Math.random() * 10);
-  this.y = Math.floor(Math.random() * 10);
-}//constructor of coins which will be collected by fury
+
+var Furry=require('./furry.js');
+var Coin=require('./coin.js');
 
 function Game() {
   this.board=document.querySelectorAll('#board div');
@@ -64,7 +58,7 @@ this.moveFurry= function() {
   }
 }
 document.addEventListener('keydown', function(event){
-game.furryDirection(event);
+self.furryDirection(event);
 });
 this.checkCoinCollision= function() {
   // var colission=Array.from(document.getElementsByTagName('div'));
@@ -86,12 +80,9 @@ this.gameOver= function() {
     var score=document.querySelector('.endScore');
     var strong=document.querySelector('strong')
     score.textContent=strong.textContent;
-    this.hideVisibleFurry(); 
+    this.hideVisibleFurry();
     //gdy wywołuje wywala błąd poieważ furry znika sam z siebie za planszą
   }
 }
 }
-var game = new Game();
-game.showFurry();
-game.showCoin();
-game.startGame();
+module.exports = Game;
