@@ -68,12 +68,14 @@ this.checkCoinCollision= function() {
     document.querySelector('.coin').classList.remove('coin');
     var result= document.querySelector('strong');
     result.textContent = parseInt(result.textContent) + 1;
+    document.getElementById('toastySound').play();
     this.coin=new Coin();
     this.showCoin();
   }
 }
 this.gameOver= function() {
   if (this.furry.x<0 || this.furry.x>9 || this.furry.y<0 || this.furry.y>9) {
+    document.getElementById('hitWall').play();
     clearInterval(this.idSetInterval);
     var over= document.getElementById('over');
     over.classList.remove('invisible');
