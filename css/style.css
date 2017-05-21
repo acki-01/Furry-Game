@@ -15,6 +15,7 @@ section#score {
   width: 640px;
   height: 640px;
   margin: 1em auto;
+  background-color:red;
 }
 
 #board  > div {
@@ -45,6 +46,9 @@ section#score div {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.furryCollected{
+  background-image: url('../images/furryCollect.xcf');
+}
 .coin {
   background-image: url('../images/coin.png');
   background-repeat: no-repeat;
@@ -59,7 +63,7 @@ section#over {
   top: 0;
   z-index: 1;
   padding: 10px;
-  background-color: rgba(179, 204, 255, 0.75);
+  background-color: rgba(47, 49, 49, 0.7);
 }
 
 section#over pre {
@@ -134,7 +138,39 @@ h1 {
 h2 {
   text-align: center;
   text-transform: uppercase;
+
 }
 .endScore {
 -webkit-animation:font 1s infinite alternate;
+}
+#restartBtn{
+  font-size: 24px;
+  padding: 10px 20px;
+  color:#4b4345;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #2E2EA6;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #6767C7;
+  margin-left: 44%;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+#restartBtn:active{
+  border: 2px solid #6767C7;
+  background-color: #2E2EA6;
+  -webkit-touch-callout: none;
+  color: #000000;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
