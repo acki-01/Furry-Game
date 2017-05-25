@@ -13,6 +13,7 @@ function Game() {
     self.moveFurry()
     }, 250);
   }
+
 this.index = function(x, y) {
   return x + (y * 10);
 }
@@ -65,7 +66,8 @@ this.checkCoinCollision= function() {
   // colission.forEach(el){
   // if (el.classList.contains('furry' && 'coin')) {
   if(this.furry.x == this.coin.x && this.furry.y == this.coin.y) {
-    document.querySelector('.coin').classList.remove('coin');
+    var coinBox=document.querySelector('.coin');
+    coinBox.classList.remove('coin');
     var result= document.querySelector('strong');
     result.textContent = parseInt(result.textContent) + 1;
     document.getElementById('toastySound').play();
@@ -83,8 +85,8 @@ this.gameOver= function() {
     var strong=document.querySelector('strong')
     score.textContent=strong.textContent;
     this.hideVisibleFurry();
-    //gdy wywołuje wywala błąd poieważ furry znika sam z siebie za planszą
+    }
   }
 }
-}
+
 module.exports = Game;
