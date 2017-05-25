@@ -1,0 +1,17 @@
+{
+  "name": "2_let_const",
+  "version": "1.0.0",
+  "description": "> Stwórz w pełni działające środowisko, które pozwoli Ci pisać kod JavaScript w wersji 6.\r >\r > Pamiętaj o:\r > - ```npm init```\r > - Zainstalowaniu odpowiednich modułów\r > - Ustawieniu Webpacka, plikiem  wyjściowym  ma być `js/out.js`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.3.3"
+  }
+}

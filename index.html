@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>Javascript Furry game</title>
     <link rel='stylesheet' href='css/style.css'>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Orbitron" rel="stylesheet">
 </head>
 
 <body>
@@ -124,10 +125,12 @@
 
 
   <section id='over' class='invisible'>
+    <div class="endScoreWindow">
+      <h2>Twój wynik:</h2>
+      <h2 class="endScore"></h2>
+    </div>
     <h1>Koniec gry</h1>
-    <div id="restartBtn">restart</div>
-    <h2>Twój wynik:</h2>
-    <h2 class="endScore"></h2>
+    <div id="restartBtn" onClick="window.location.reload()">restart</div>
   </section>
 
   <script src='js/out.js'></script>
